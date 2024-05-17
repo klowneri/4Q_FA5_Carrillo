@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+    <div><a href="4Q_FA5_2_Carrillo.html">PART 2</a></div>
+    <script>
+        do {
+            var input = prompt("Enter a number:");
+        }
+        while (input != Number(input) || input == "");
+
+        document.write("Number inputted: " + input + "<br/>");
+
+        var actual = parseInt(input);
+
+        if (actual % 2 == 0) {
+            evenTriangle(actual);
+        }
+
+        else {
+            oddRectangle(actual);
+        }
+
+        function oddRectangle(actual) {
+            var a, b;
+            var output = "";
+
+            for (a = actual; a >= 1; a--) {
+                for (b = actual; b >= 1; b--) {
+                    output += a + " ";
+                }
+                output += "<br>";
+            }
+            document.write(output);
+            console.log(output);
+        }
+
+        function evenTriangle(actual) {
+            var a, b;
+            var output = "";
+
+            for (a = actual; a >= 1; a--) {
+                for (b = actual; b < a; b++) {
+                    output += a + " ";
+                }
+                output += "<br>";
+            }
+            document.write(output);
+        }
+    </script>
+</body>
+</html>

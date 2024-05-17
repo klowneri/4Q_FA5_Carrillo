@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+    <div><a href="4Q_FA5_1_Carrillo.html">PART 1</a></div>
+    <input type="text" id="pepol">
+    <button onclick = "newContact();">Add</button>
+    <button onclick = "removeContact();">Remove</button>
+    <p id="showContacts"></p>
+
+    <script>
+        var contacts = [];
+
+        function newContact() {
+            var contactsList = "";
+            var contact = document.getElementById("pepol").value;
+            contacts.push(contact);
+
+            for(x in contacts ){
+                contactsList = contactsList + contacts[x] + ", ";
+                }
+            if (contacts.length > 7) {
+                contacts.shift();
+            }
+            document.getElementById("showContacts").innerHTML = contactsList;
+  
+            
+        }
+
+        function removeContact() {
+            var contactsList = "";
+            var contact = document.getElementById("pepol");
+            contacts.pop(contact);
+
+            for(x in contacts ){
+                contactsList = contactsList + contacts[x] + ", ";
+            }
+            document.getElementById("showContacts").innerHTML = contactsList;
+        }
+
+    </script>
+</body>
+</html>
